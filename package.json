@@ -1,0 +1,107 @@
+{
+  "name": "@ideal-postcodes/supported-browsers",
+  "version": "0.0.1",
+  "description": "Browsers support by ideal-postcodes.co.uk",
+  "author": {
+    "name": "Ideal Postcodes",
+    "email": "support@ideal-postcodes.co.uk",
+    "url": "https://ideal-postcodes.co.uk"
+  },
+  "bugs": {
+    "url": "https://github.com/ideal-postcodes/supported-browsers/issues",
+    "email": "support@ideal-postcodes.co.uk"
+  },
+  "homepage": "https://github.com/ideal-postcodes/supported-browsers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ideal-postcodes/supported-browsers.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "npm run lint && NODE_ENV=test nyc mocha",
+    "docs": "./node_modules/.bin/typedoc --mode file --target ES3 --out docs/ --name 'Ideal Postcodes JS Client Interface' --theme minimal --excludePrivate --hideGenerator --excludeExternals lib/",
+    "lint": "eslint lib/**/*.ts",
+    "build": "npm run lint && tsc",
+    "coverage": "nyc report --reporter=text-lcov | coveralls || true",
+    "release": "semantic-release --no-ci",
+    "prepublishOnly": "npm test && npm run build",
+    "watch": "mocha --watch-extensions ts --watch"
+  },
+  "prettier": {
+    "trailingComma": "es5"
+  },
+  "mocha": {
+    "extension": [
+      "ts"
+    ],
+    "exit": true,
+    "fullTrace": true,
+    "require": [
+      "ts-node/register",
+      "source-map-support/register"
+    ]
+  },
+  "nyc": {
+    "include": [
+      "lib/**/*.ts"
+    ],
+    "exclude": [
+      "dist/*",
+      "**/*.d.ts"
+    ],
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "all": true
+  },
+  "engines": {
+    "node": ">=8.0"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "API",
+    "Interface",
+    "UK",
+    "Address",
+    "Postcode",
+    "Search",
+    "Ideal Postcodes"
+  ],
+  "release": {
+    "extends": "@cablanchard/semantic-release/dist/npm"
+  },
+  "devDependencies": {
+    "@cablanchard/eslint-config": "~1.1.0",
+    "@cablanchard/semantic-release": "~1.2.1",
+    "@cablanchard/tsconfig": "~1.0.0",
+    "@types/chai": "~4.2.0",
+    "@types/mocha": "~5.2.5",
+    "@typescript-eslint/eslint-plugin": "~2.3.0",
+    "@typescript-eslint/eslint-plugin-tslint": "~2.3.0",
+    "@typescript-eslint/parser": "~2.3.0",
+    "chai": "~4.2.0",
+    "coveralls": "~3.0.2",
+    "eslint": "~6.4.0",
+    "mocha": "~6.2.0",
+    "nyc": "~14.1.0",
+    "prettier": "~1.18.0",
+    "semantic-release": "~15.13.24",
+    "source-map-support": "~0.5.9",
+    "ts-node": "~8.4.1",
+    "tslint": "~5.20.0",
+    "typescript": "~3.6.2"
+  },
+  "dependencies": {}
+}
