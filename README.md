@@ -4,18 +4,9 @@
 
 [![CircleCI](https://circleci.com/gh/ideal-postcodes/supported-browsers.svg?style=svg)](https://circleci.com/gh/ideal-postcodes/supported-browsers)
 ![Dependency Status](https://david-dm.org/ideal-postcodes/supported-browsers.svg)
-![npm version](https://badge.fury.io/js/%40ideal-postcodes%2Fsupported-browsers.svg)](https://badge.fury.io/js/%40ideal-postcodes%2Fsupported-browsers)
+[![npm version](https://badge.fury.io/js/%40ideal-postcodes%2Fsupported-browsers.svg)](https://badge.fury.io/js/%40ideal-postcodes%2Fsupported-browsers)
 
 `@ideal-postcodes/supported-browsers` exports a matrix of supported browsers
-
-## Links
-
-- [Configuration & Usage](#configuration--usage)
-- [Quickstart](#quickstart)
-- [Client Documentation](https://core-interface.ideal-postcodes.dev/#documentation)
-- [Core JS API Client Documentation](https://core-interface.ideal-postcodes.dev/)
-- [npm Module](https://www.npmjs.com/package/@ideal-postcodes/core-node)
-- [GitHub Repository](https://github.com/ideal-postcodes/core-node)
 
 ## Links
 
